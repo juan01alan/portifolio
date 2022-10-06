@@ -1,0 +1,525 @@
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: black; 
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rebeccapurple; 
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    height: 12vh;
+}
+nav{
+    height: 12vh;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+nav .center{
+    display: none;
+}
+
+nav .center>ul{
+    display: none;
+}
+
+body{
+    font-size: 12px;
+}
+
+a{
+    transition: all .5s ease;
+}
+
+nav .center>ul a{
+    display: none;
+}
+
+nav .center>ul a:hover{
+    color: rebeccapurple;
+}
+
+.mobilenv{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.linksmbl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: all .8s ease;
+    left: -120%;
+    z-index: 99;
+    width: 80vw;
+    padding: 4% 1%;
+    background: black;
+}
+
+.linksmbl a{
+    color: white;
+    font-size: 1em;
+    display: block;
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.linksmbl a:hover{
+    color: purple;
+}
+
+.mobilenv input{
+    position: absolute;
+    display: block;
+    left: 80%;
+    top: 0;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    z-index: 99;
+    opacity: 0;
+}
+
+.mobilenv input:checked + .btnnv + .linksmbl{
+    left: 0%;
+}
+
+.mobilenv input:checked + .btnnv div{
+    border: 2px solid purple;
+}
+
+.mobilenv .btnnv{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1%;
+    left: 80%;
+    top: 0;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    z-index: 98;
+}
+
+.btnnv div{
+    border: 2px solid rgba(255, 255, 255,0.7);
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin: 2px 0;
+}
+
+.sec1{
+    height: 100vh;
+    width: 100%;
+}
+
+.z-video{
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.z-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec1 .center{
+    padding: 5vh 2%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1%;
+}
+
+.textsc1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.textsc1 h6{
+    color: white;
+    font-size: 1.7em;
+    font-weight: bolder;
+    text-align: center;
+    margin: 1px 0;
+}
+.textsc1 h3{
+    color: rebeccapurple;
+    font-size: 2.2em;
+    text-align: center;
+    font-weight: bolder;
+    margin: 1px 0;
+}
+.textsc1 p{
+    color: white;
+    font-size: 1.4em;
+    font-weight: bolder;
+    margin: 1px 0;
+    text-align: center;
+}
+.textsc1 p::after{
+    content: '';
+    animation: blink .2s alternate infinite;
+    margin-left: 8px;
+    border: 1px solid rgba(255,255, 255, 0.4);
+}
+@keyframes blink {
+    from{border: 1px solid rgba(255,255, 255, 0.4);}
+    to{border: 1px solid white;}
+}
+.textsc1>div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2% 0;
+}
+
+.textsc1>div a{
+    display: block;
+    width: 100%;
+    margin-bottom: 1%;
+    padding: 10px 5px;
+    font-size: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: rebeccapurple;
+    border-radius: 5px;
+}
+
+.textsc1>div a:hover{
+    background: white;
+    color: black;
+}
+
+.imgsc1{display: none;
+}
+
+.sec2{
+    height: 28vh;
+    margin: 2% 0;
+    padding: 0 1%;
+    width: 100%;
+}
+
+.sec2 .center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 6% 4%;
+}
+
+.textsc2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blink{
+    font-size: 1.6em;
+    margin: 1% 0;
+    color: white;
+}
+
+.blink::after{
+    content: '';
+    margin-left: 8px;
+    border: 1px solid rgba(255,255, 255, 0.4);
+    animation: blink 0.5s alternate infinite;
+}
+
+.p-silver{
+    font-size: 0.7em;
+    color: silver;
+    line-height: 1.4em;
+}
+
+.imgsc2{display: none;
+}
+
+.sec3{
+    margin: 5vh 0;
+    height: fit-content;
+    width: 100%;
+}
+
+.sec3 .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec3 .gap{
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    height: 50%;
+    grid-template-columns: 1fr;
+    column-gap: 2%;
+    grid-template-rows: 1fr;
+}
+
+.itensc3{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 10%;
+    padding: 2%;
+    border: 4px outset purple;
+    border-radius: 5px;
+    transition: all .8s ease;
+    cursor: pointer;
+}
+
+.itensc3:hover{
+    border: 4px outset white;
+}
+
+.itensc3:hover *{
+    color: white;
+}
+.sec3 .blink{
+    margin: 2% 0;
+}
+
+.itensc3 h4{
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.7em;
+    color: white;
+}
+
+.itensc3 p{
+    color: white;
+    line-height: 1.4em;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.itensc3 a{
+    text-decoration: none;
+    font-size: 1.1em;
+    text-align: center;
+    color: white;
+    display: block;
+    background: purple;
+}
+
+.itensc3 a:hover{
+    background: white;
+    color: rebeccapurple;
+}
+.itensc3:hover a{
+    background: white;
+    color: rebeccapurple;
+}
+
+.sec3 .center>a{
+    text-align: center;
+    display: block;
+    margin: 2% 0;
+    text-decoration: none;
+    font-size: 0.8em;
+    color: white;
+}
+
+.sec3 .center>a:hover{
+    color: rebeccapurple;
+}
+
+.sec4{
+    margin-top: 5vh;
+    height: fit-content;
+    min-height: 40vh;
+    width: 100%;
+}
+
+.sec4 .center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec4 .center .blink{
+    display: block;
+}
+
+.flexsc4{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2%;
+    grid-template-rows: 0.5fr 0.5fr;
+    row-gap: 4%;
+}
+
+.flexsc4>div{
+    border: 4px outset white;
+    border-radius: 5px;
+    width: 100%;
+    transition: all .5s ease;
+    height: 100%;
+    padding: 2% 1%;
+}
+
+.flexsc4>div:hover{
+    border: 4px outset purple;
+}
+
+.flexsc4>div h4{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.flexsc4>div p{
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.sec5{
+    height: 85vh;
+    margin-top: 5vh;
+    width: 100%;
+}
+
+.sec5 .center{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  30% 1fr;
+    place-content: center;
+    row-gap: 2%;
+    padding: 0 5%;
+}
+
+.texthabilidades{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.texthabilidades .blink{
+    margin-bottom: 5%;
+}
+
+.gridhabilidades{
+    height: 100%;
+    margin: auto;
+    max-height: 500px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 300px;
+    row-gap: 2%;
+    column-gap: 1%;
+}
+
+.gridhabilidades>div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .8s ease;
+}
+
+.gridhabilidades>div:hover{
+    filter: grayscale(100%);
+}
+.gridhabilidades>div:hover p{
+    visibility: visible;
+}
+
+.gridhabilidades p{
+    color: white;
+    text-align: center;
+    visibility: hidden;
+    font-size: 1em;
+    margin: 4px 0;
+}
+
+.gridhabilidades img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 60px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+#footer{
+    height: 8vh;
+    width: 100%;
+    border-top: 2px solid white;
+    border-radius: 5px;
+}
+
+#footer .center{
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer p:nth-child(1){
+    color: white;
+    font-size: 1em;
+}
+
+#footer p:nth-child(2){
+    color: purple;
+    font-size: 1em;
+}
