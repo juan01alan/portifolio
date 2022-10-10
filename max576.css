@@ -479,6 +479,10 @@ nav a:hover::after{
     margin-bottom: 5%;
 }
 
+.textHC{
+    font-size: 1.5em;
+}
+
 .gridhabilidades{
     height: 100%;
     margin: auto;
