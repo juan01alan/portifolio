@@ -14,148 +14,127 @@ body::-webkit-scrollbar {
   
   body::-webkit-scrollbar-thumb {
     background-color: rebeccapurple; 
-}
-header{
+}header{
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    z-index: 99;
-    height: 54px;
+    height: 8vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
 }
 nav{
-    height: 54px;
-    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
     width: 100%;
 }
-
-nav .center{
-    display: none;
+nav .center:nth-child(1){display: none;}
+.btnnv{
+    cursor: pointer;
+    margin-right: 2%;
+    display: block;
+    position: relative;
 }
-
-nav .center>ul{
-    display: none;
+#checkbox:checked ~ .btnnv>.line1{
+    height: 1px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
 }
-
-body{
-    font-size: 12px;
+#checkbox:checked ~ .btnnv>.line3{
+    height: 1px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
 }
-
-a{
-    transition: all .5s ease;
+ #checkbox:checked ~ .btnnv>.line2{
+    opacity: 0;
 }
-
-nav .center>ul a{
-    display: none;
+.btnnv>div{
+    width: 32px;
+    margin: 8px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
 }
-
-nav .center>ul a:hover{
-    color: rebeccapurple;
-}
-
 .mobilenv{
+    position: relative;
     display: flex;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    justify-content: flex-end;
     align-items: center;
-    position: relative;
 }
-
 .linksmbl{
+    position: absolute;
+    top: 0%;
+    left: -150%;
+    padding: 0 1%;
+    margin: 0 0;
+    z-index: 99;
+    transition: all 0.4s ease;
+    height: 92vh;
+    margin-top: 8vh;
+    width: 60%;
+    background: black;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    transition: all .8s ease;
-    left: -120%;
-    z-index: 99;
-    width: 80vw;
-    padding: 4% 1%;
-    background: black;
-}
-
-.linksmbl a{
-    color: white;
-    font-size: 1em;
-    display: block;
-    padding: 0.5em;
-    width: 100%;
     text-align: center;
-    text-decoration: none;
 }
-
-.linksmbl a:hover{
-    color: purple;
-}
-
-.mobilenv input{
-    position: absolute;
-    display: block;
-    left: 80%;
-    top: 50%;
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    z-index: 99;
+#checkbox{
+position: absolute;
+  z-index: 99;
     opacity: 0;
+    display:block;
+    width:60px;
+    height:50px;
+    overflow:hidden;
 }
-
-.mobilenv input:checked + .btnnv + .linksmbl{
+#checkbox:checked ~ .linksmbl{
     left: 0%;
 }
-.mobilenv input + .btnnv div:nth-child(1){
-    position: initial;
-    transform: rotate(0deg);
-}
-.mobilenv input + .btnnv div:nth-child(2){
-    opacity: 1;
-}
-.mobilenv input + .btnnv div:nth-child(3){
-    position: initial;
-    transform: rotate(0deg);
-}
-
-.mobilenv input:checked + .btnnv div{
-    border: 2px solid purple;
-}
-.mobilenv input:checked + .btnnv div:nth-child(1){
-    position: absolute;
-    top: 0;
-    transform: rotate(45deg);
-}
-.mobilenv input:checked + .btnnv div:nth-child(2){
-    opacity: 0;
-}
-.mobilenv input:checked + .btnnv div:nth-child(3){
-    position: absolute;
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-.mobilenv .btnnv{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1%;
-    left: 80%;
-    top: 50%;
-    overflow: hidden;
-    width: 32px;
-    height: 32px;
-    z-index: 98;
-}
-
-.btnnv div{
-    border: 2px solid rgba(255, 255, 255,0.7);
+.linksmbl a{
+    margin: 4px 0;
+    color: white;
+    padding: 20px 0;
+    font-size: 16px;
     display: block;
-    height: 4px;
     width: 100%;
-    margin: 2px 0;
-    transition: all .8s ease;
+}
+nav ul{
+    width: 100%;
+}
+nav a{
+    color: white;
+    padding: 8px 2px;
+    position: relative;
+    margin: 0 4px;
+}
+nav a:hover{
+    color: white;
+}
+nav a::after{
+    position: absolute;
+    bottom: 4px;
+    transition: width .4s ease-in-out;
+    left: 0;
+    content: '';
+    background: rebeccapurple;
+    height: 1px;
+    display: block;
+    width: 0%;
+}
+nav a:hover::after{
+    height: 1px;
+    display: block;
+    width: 100%;
 }
 
 .sec1{
