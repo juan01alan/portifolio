@@ -6,15 +6,17 @@ html{
 
 body::-webkit-scrollbar {
     width: 12px;               
-  }
+}
   
   body::-webkit-scrollbar-track {
     background: black; 
-  }
+}
   
   body::-webkit-scrollbar-thumb {
     background-color: rebeccapurple; 
-}header{
+}
+
+header{
     position: fixed;
     top: 0;
     left: 0;
@@ -23,10 +25,12 @@ body::-webkit-scrollbar {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
 }
+
 nav{
     height: 100%;
     width: 100%;
 }
+
 nav .center:nth-child(1){display: none;}
 .btnnv{
     cursor: pointer;
@@ -60,6 +64,7 @@ nav .center:nth-child(1){display: none;}
     background: white;
     transition: all 0.3s ease;
 }
+
 .mobilenv{
     position: relative;
     display: flex;
@@ -71,6 +76,7 @@ nav .center:nth-child(1){display: none;}
     justify-content: flex-end;
     align-items: center;
 }
+
 .linksmbl{
     position: absolute;
     top: 0%;
@@ -88,6 +94,7 @@ nav .center:nth-child(1){display: none;}
     align-items: center;
     text-align: center;
 }
+
 #checkbox{
 position: absolute;
   z-index: 99;
@@ -97,29 +104,38 @@ position: absolute;
     height:50px;
     overflow:hidden;
 }
+
 #checkbox:checked ~ .linksmbl{
     left: 0%;
 }
+
 .linksmbl a{
     margin: 4px 0;
     color: white;
     padding: 20px 0;
+    text-decoration: none;
     font-size: 16px;
     display: block;
     width: 100%;
 }
+a{
+    text-decoration: none;
+}
 nav ul{
     width: 100%;
 }
+
 nav a{
     color: white;
     padding: 8px 2px;
     position: relative;
     margin: 0 4px;
 }
+
 nav a:hover{
     color: white;
 }
+
 nav a::after{
     position: absolute;
     bottom: 4px;
@@ -131,6 +147,7 @@ nav a::after{
     display: block;
     width: 0%;
 }
+
 nav a:hover::after{
     height: 1px;
     display: block;
