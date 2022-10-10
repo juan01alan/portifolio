@@ -23,7 +23,7 @@ header{
     height: 12vh;
 }
 nav{
-    height: 12vh;
+    height: 54px;
     background: rgba(0, 0, 0, 0.7);
     width: 100%;
 }
@@ -96,8 +96,8 @@ nav .center>ul a:hover{
     left: 80%;
     top: 0;
     overflow: hidden;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     z-index: 99;
     opacity: 0;
 }
@@ -105,9 +105,27 @@ nav .center>ul a:hover{
 .mobilenv input:checked + .btnnv + .linksmbl{
     left: 0%;
 }
+.mobilenv input + .btnnv div:nth-child(1){
+    transform: rotate(0deg);
+}
+.mobilenv input + .btnnv div:nth-child(2){
+    opacity: 1;
+}
+.mobilenv input + .btnnv div:nth-child(3){
+    transform: rotate(0deg);
+}
 
 .mobilenv input:checked + .btnnv div{
     border: 2px solid purple;
+}
+.mobilenv input:checked + .btnnv div:nth-child(1){
+    transform: rotate(45deg);
+}
+.mobilenv input:checked + .btnnv div:nth-child(2){
+    opacity: 0;
+}
+.mobilenv input:checked + .btnnv div:nth-child(3){
+    transform: rotate(-45deg);
 }
 
 .mobilenv .btnnv{
@@ -120,8 +138,8 @@ nav .center>ul a:hover{
     left: 80%;
     top: 0;
     overflow: hidden;
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     z-index: 98;
 }
 
