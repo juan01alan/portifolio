@@ -20,7 +20,7 @@ header{
     top: 0;
     width: 100%;
     z-index: 99;
-    height: 12vh;
+    height: 54px;
 }
 nav{
     height: 54px;
@@ -94,7 +94,7 @@ nav .center>ul a:hover{
     position: absolute;
     display: block;
     left: 80%;
-    top: 0;
+    top: 50%;
     overflow: hidden;
     width: 40px;
     height: 40px;
@@ -106,12 +106,14 @@ nav .center>ul a:hover{
     left: 0%;
 }
 .mobilenv input + .btnnv div:nth-child(1){
+    position: initial;
     transform: rotate(0deg);
 }
 .mobilenv input + .btnnv div:nth-child(2){
     opacity: 1;
 }
 .mobilenv input + .btnnv div:nth-child(3){
+    position: initial;
     transform: rotate(0deg);
 }
 
@@ -119,12 +121,16 @@ nav .center>ul a:hover{
     border: 2px solid purple;
 }
 .mobilenv input:checked + .btnnv div:nth-child(1){
+    position: absolute;
+    top: 0;
     transform: rotate(45deg);
 }
 .mobilenv input:checked + .btnnv div:nth-child(2){
     opacity: 0;
 }
 .mobilenv input:checked + .btnnv div:nth-child(3){
+    position: absolute;
+    top: 0;
     transform: rotate(-45deg);
 }
 
@@ -136,7 +142,7 @@ nav .center>ul a:hover{
     flex-direction: column;
     padding: 1%;
     left: 80%;
-    top: 0;
+    top: 50%;
     overflow: hidden;
     width: 32px;
     height: 32px;
@@ -149,6 +155,7 @@ nav .center>ul a:hover{
     height: 4px;
     width: 100%;
     margin: 2px 0;
+    transition: all .8s ease;
 }
 
 .sec1{
