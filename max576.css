@@ -7,8 +7,12 @@ html{
 body::-webkit-scrollbar {
     width: 12px;               
 }
-  
-  body::-webkit-scrollbar-track {
+
+body{
+    font-size: 12px;
+}
+
+body::-webkit-scrollbar-track {
     background: black; 
 }
   
@@ -114,7 +118,7 @@ position: absolute;
     color: white;
     padding: 20px 0;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.2em;
     display: block;
     width: 100%;
 }
