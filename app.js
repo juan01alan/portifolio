@@ -2,9 +2,9 @@
 window.addEventListener('DOMContentLoaded', ()=>{
     const textsc1 = document.getElementById("writterSou");
 
-    let tosc1 = 'Front End Developer';
+    let tosc1 = 'Desenvolvedor';
     const escrever = () =>{
-        if (tosc1 == 'Front End Developer' && textsc1.innerHTML != tosc1) {
+        if (tosc1 == 'Desenvolvedor' && textsc1.innerHTML != tosc1) {
             let resultado = '';
             let array = tosc1.split('');
             let i = 0;
